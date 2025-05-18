@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+canvas {
+    border: 1px solid #000;
+    background: #f7f7f7;
+}
