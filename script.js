@@ -12,10 +12,18 @@ const dino = {
     onGround: true,
 };
 
+function resetDino() {
+    dino.y = canvas.height - dino.height;
+    dino.vy = 0;
+    dino.onGround = true;
+}
+
 let obstacles = [];
 let spawnTimer = 0;
 let score = 0;
 let gameOver = false;
+
+resetDino();
 
 function jump() {
     if (dino.onGround && !gameOver) {
@@ -26,7 +34,7 @@ function jump() {
         score = 0;
         gameOver = false;
         spawnTimer = 0;
-        dino.y = canvas.height - dino.height;
+        resetDino();
     }
 }
 
